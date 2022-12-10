@@ -1,0 +1,27 @@
+server:
+    port: 8080
+     
+      
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+  datasource:
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    hikari:
+      auto-commit: 'true'
+      connection-timeout: 20000
+      idle-timeout: 10000
+      max-lifetime: 1000
+      maximum-pool-size: 10 
+      minimum-idle: 10
+    jdbcurl: jdbc:sqlserver://10.0.2.43:1433;encrypt=true;trustServerCertificate=true;database=SB_Credit;
+    password: Clarium@2022
+    username: cnb_app_usr
+  main:
+    allow-circular-references: true
+  
+

@@ -1,0 +1,17 @@
+creditCard details:
+calculate same date next month:		
+		Date nextDate = null;
+		try {
+			nextDate = dateFormat.parse(date);
+			Calendar c = Calendar.getInstance();
+			c.setTime(nextDate);
+			c.add(Calendar.MONTH, 1); // adding a month directly - gives the start of next month.
+			String firstDate = dateFormat.format(c.getTime());
+			nextDate = dateFormat.parse(firstDate);
+
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		System.out.println(nextDate);
+		return nextDate;
